@@ -1,2 +1,3 @@
-# Course_1_Crash_Course_on_Python
-Coursera: Crash Course on Python
+# Course 1: Crash Course on Python
+
+Notes on Coursera course Crash Course on Python
