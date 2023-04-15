@@ -37,3 +37,13 @@ def groups_per_user(group_dictionary):
 
 print(groups_per_user({"local": ["admin", "userA"], "public": ["admin", "userB"], "administrator": ["admin"]}))
 # Should print: {'admin': ['local', 'public', 'administrator'], 'userA': ['local'], 'userB': ['public']}
+
+# Question 3
+# The dict.update method updates one dictionary with the items coming from the other dictionary, so that existing entries are replaced and new entries are added. 
+# What is the content of the dictionary “wardrobe“ at the end of the following code?
+wardrobe = {'shirt': ['red', 'blue', 'white'], 'jeans': ['blue', 'black']}
+new_items = {'jeans': ['white'], 'scarf': ['yellow'], 'socks': ['black', 'brown']}
+wardrobe.update(new_items)
+
+print(wardrobe.items())
+# Should print: dict_items([('shirt', ['red', 'blue', 'white']), ('jeans', ['white']), ('scarf', ['yellow']), ('socks', ['black', 'brown'])])
