@@ -85,3 +85,23 @@ def increments(start, end):
 print(increments(2, 3)) # Should print [4, 5]
 print(increments(1, 5)) # Should print [3, 4, 5, 6, 7]
 print(increments(0, 10)) # Should print [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+# Question 5
+# Fill in the blanks to complete the “countries” function. This function accepts a dictionary containing a list of continents (keys) and several countries from each 
+# continent (values).  For each continent, format a string to print the names of the countries only. The values for each key should appear on their own line.
+
+def countries(countries_dict):
+    result = ""
+    # Complete the for loop to iterate through the key and value items 
+    # in the dictionary.
+    for keys, values in countries_dict.items():
+        # Use a string method to format the required string.
+        result += str(values) + "\n"
+    return result
+
+print(countries({"Africa": ["Kenya", "Egypt", "Nigeria"], "Asia":["China", "India", "Thailand"], "South America": ["Ecuador", "Bolivia", "Brazil"]}))
+
+# Should print:
+# ['Kenya', 'Egypt', 'Nigeria']
+# ['China', 'India', 'Thailand']
+# ['Ecuador', 'Bolivia', 'Brazil']
