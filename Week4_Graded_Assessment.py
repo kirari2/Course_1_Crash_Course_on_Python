@@ -105,3 +105,88 @@ print(countries({"Africa": ["Kenya", "Egypt", "Nigeria"], "Asia":["China", "Indi
 # ['Kenya', 'Egypt', 'Nigeria']
 # ['China', 'India', 'Thailand']
 # ['Ecuador', 'Bolivia', 'Brazil']
+
+# Question 6
+# Consider the following scenario about using Python dictionaries: 
+# Tessa and Rick are hosting a party. Both sent out invitations to their friends, and each one collected responses into dictionaries, with names of their friends and 
+# how many guests each friend was bringing. Each dictionary is a partial guest list, but Rick's guest list has more current information about the number of guests. 
+# Complete the function to combine both dictionaries into one, with each friend listed only once, and the number of guests from Rick's dictionary taking precedence, 
+# if a name is included in both dictionaries. Then print the resulting dictionary. This function should:
+# 1. accept two dictionaries through the function’s parameters;
+# 2. combine both dictionaries into one, with each key listed only once;
+# 3. the values from the “guests1” dictionary taking precedence, if a key is included in both dictionaries;
+# 4. then print the new dictionary of combined items.
+
+def combine_guests(guests1, guests2):
+  guests2.update(guests1)  # Use a dictionary method to combine the dictionaries.
+  return guests2
+
+Ricks_guests = { "Adam":2, "Camila":3, "David":1, "Jamal":3, "Charley":2, "Titus":1, "Raj":4}
+Tessas_guests = { "David":4, "Noemi":1, "Raj":2, "Adam":1, "Sakira":3, "Chidi":5}
+
+print(combine_guests(Ricks_guests, Tessas_guests))
+# Should print:
+# {'David': 1, 'Noemi': 1, 'Raj': 4, 'Adam': 2, 'Sakira': 3, 'Chidi': 5, 'Camila': 3, 'Jamal': 3, 'Charley': 2, 'Titus': 1}
+
+# Question 7
+# Complete the function so that input like "This is a sentence." will return a dictionary that holds the count of each letter that occurs in the string: 
+# {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}. This function should:
+# 1. accept a string “text” variable through the function’s parameters;
+# 2. iterate over each character the input string to count the frequency of each letter found, (only letters should be counted, do not count blank spaces, numbers, or punctuation; keep in mind that Python is case sensitive);
+# 3. populate the new dictionary with the letters as keys, ensuring each key is unique, and assign the value for each key with the count of that letter;
+# 4. return the new dictionary.
+
+def count_letters(text):
+  # Initialize a new dictionary.
+  dictionary = {}
+  # Complete the for loop to iterate through each "text" character and 
+  # use a string method to ensure all letters are lowercase.
+  for character in text.lower():   
+    # Complete the if-statement using a string method to check if the
+    # character is a letter.
+    if character.isalpha():
+      # Complete the if-statement using a logical operator to check if 
+      # the letter is not already in the dictionary.
+      if character not in dictionary: 
+           # Use a dictionary operation to add the letter as a key
+           # and set the initial count value to zero.
+           dictionary[character] = 0  
+      # Use a dictionary operation to increment the letter count value 
+      # for the existing key.
+      dictionary[character] += 1 # Increment the letter counter. 
+  return dictionary
+
+print(count_letters("AaBbCc"))
+# Should be {'a': 2, 'b': 2, 'c': 2}
+
+print(count_letters("Math is fun! 2+2=4"))
+# Should be {'m': 1, 'a': 1, 't': 1, 'h': 1, 'i': 1, 's': 1, 'f': 1, 'u': 1, 'n': 1}
+
+print(count_letters("This is a sentence."))
+# Should be {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}
+
+# Question 8 
+# What do the following commands return when genre = "transcendental"?
+
+genre = "transcendental"
+print(genre[:-8])
+print(genre[-7:9])
+
+# Should be "transc, nd"
+
+# Question 9
+# What does the list "music_genres" contain after these commands are executed?
+
+music_genres = ["rock", "pop", "country"]
+music_genres.append("blues")
+print(music_genres)
+
+# Should be ['rock', 'pop', 'country', 'blues']
+
+# Question 10
+# What do the following commands return?
+
+speed_limits = {"street": 35, "highway": 65, "school": 15}
+speed_limits["highway"]
+
+# Should be 65
