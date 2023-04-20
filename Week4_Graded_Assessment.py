@@ -212,7 +212,6 @@ print(confirm_length("Monday")) # Should print 6
 print(confirm_length("")) # Should print 0
 
 # Question 12
-# Question 2
 # Complete the for loop and string method needed in this function so that a function call like "alpha_length("This has 1 number in it")" will return the output "17". 
 # This function should:
 # 1. accept a string through the parameters of the function;
@@ -234,3 +233,20 @@ def alpha_length(string):
 print(alpha_length("This has 1 number in it")) # Should print 17
 print(alpha_length("Thisisallletters")) # Should print 16
 print(alpha_length("This one has punctuation!")) # Should print 21
+
+# Question 18
+# What does the list "colors" contain after these commands are executed?
+
+colors = ["red", "white", "blue"]
+colors.insert(2, "yellow")
+print(colors)
+
+# Should be: colors = ["red", "white", "blue"]
+
+# Question 19
+# What do the following commands return?
+
+host_addresses = {"router": "192.168.1.1", "localhost": "127.0.0.1", "google": "8.8.8.8"}
+print(host_addresses.keys())
+
+# Should print: dict_keys(['router', 'localhost', 'google'])
