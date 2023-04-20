@@ -253,7 +253,80 @@ def sort_distance(distances):
 print(sort_distance([2,4,0,15,8,9]))
 # Should print [15, 9, 8, 4, 2, 0]
 
-# Question 18
+# Question 14
+# Fill in the blank to complete the “squares” function. This function should use a list comprehension to create a list of squared numbers (using either the expression n*n 
+# or n**2). The function receives two variables and should return the list of squares that occur between the “start” and “end” variables inclusively (meaning the range 
+# should include both the “start” and “end” values). Complete the list comprehension in this function so that input like “squares(2, 3)” will produce the output “[4, 9]”.
+
+def squares(start, end):
+    return [ n*n for n in range(start, end + 1) ] # Create the required list comprehension.
+
+
+print(squares(2, 3)) # Should print [4, 9]
+print(squares(1, 5)) # Should print [1, 4, 9, 16, 25]
+print(squares(0, 10)) # Should print [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
+# Question 15
+# Consider the following scenario about using Python dictionaries: 
+# Tessa and Rick are hosting a party. Together, they sent out invitations, and collected the responses in a dictionary, with names of their friends and the number of guests 
+# each friend will be bringing. Complete the function so that the “check_guests” function retrieves the number of guests (value)  the specified friend “guest” (key) is bringing.
+# This function should: 
+# 1. accept a dictionary “guest_list” and a key “guest” variable passed through the function parameters;
+# 2. print the values associated with the key variable.
+
+def check_guests(guest_list, guest):
+  return guest_list[guest] # Return the value for the given key
+
+
+guest_list = { "Adam":3, "Camila":3, "David":5, "Jamal":3, "Charley":2, "Titus":1, "Raj":6, "Noemi":1, "Sakira":3, "Chidi":5}
+
+
+print(check_guests(guest_list, "Adam")) # Should print 3
+print(check_guests(guest_list, "Sakira")) # Should print 3
+print(check_guests(guest_list, "Charley")) # Should print 2
+
+# Question 16
+# Use a dictionary to count the frequency of numbers in the given “text” string. Only numbers should be counted. Do not count blank spaces, letters, or punctuation. Complete 
+# the function so that input like "1001000111101" will return a dictionary that holds the count of each number that occurs in the string  {'1': 7, '0': 6}. This function should: 
+# 1. accept a string “text” variable through the function’s parameters;
+# 2. initialize an new dictionary;
+# 3. iterate over each text character to check if the character is a number’
+# 4. count the frequency of numbers in the input string, ignoring all other characters;
+# 5. populate the new dictionary with the numbers as keys, ensuring each key is unique, and assign the value for each key with the count of that number;
+# 6. return the new dictionary.
+
+def count_numbers(text):
+  # Initialize a new dictionary.
+  dictionary = {}
+  # Complete the for loop to iterate through each "text" character.
+  for character in text:
+    # Complete the if-statement using a string method to check if the
+    # character is a number.
+    if character.isnumeric():
+      # Complete the if-statement using a logical operator to check if 
+      # the number is not already in the dictionary.
+      if character not in dictionary:
+           # Use a dictionary operation to add the number as a key
+           # and set the initial count value to zero.
+           dictionary[character] = 0
+      # Use a dictionary operation to increment the number count value 
+      # for the existing key.
+      dictionary[character] += 1
+  return dictionary
+
+print(count_numbers("1001000111101"))
+# Should be {'1': 7, '0': 6}
+
+print(count_numbers("Math is fun! 2+2=4"))
+# Should be {'2': 2, '4': 1}
+
+print(count_numbers("This is a sentence."))
+# Should be {}
+
+print(count_numbers("55 North Center Drive"))
+# Should be {'5': 2}
+
+# Question 17
 # What does the list "colors" contain after these commands are executed?
 
 colors = ["red", "white", "blue"]
@@ -262,7 +335,7 @@ print(colors)
 
 # Should be: colors = ["red", "white", "blue"]
 
-# Question 19
+# Question 18
 # What do the following commands return?
 
 host_addresses = {"router": "192.168.1.1", "localhost": "127.0.0.1", "google": "8.8.8.8"}
