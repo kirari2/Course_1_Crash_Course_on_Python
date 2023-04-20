@@ -132,7 +132,8 @@ print(combine_guests(Ricks_guests, Tessas_guests))
 # Complete the function so that input like "This is a sentence." will return a dictionary that holds the count of each letter that occurs in the string: 
 # {'t': 2, 'h': 1, 'i': 2, 's': 3, 'a': 1, 'e': 3, 'n': 2, 'c': 1}. This function should:
 # 1. accept a string “text” variable through the function’s parameters;
-# 2. iterate over each character the input string to count the frequency of each letter found, (only letters should be counted, do not count blank spaces, numbers, or punctuation; keep in mind that Python is case sensitive);
+# 2. iterate over each character the input string to count the frequency of each letter found, (only letters should be counted, do not count blank spaces, numbers, or 
+# punctuation; keep in mind that Python is case sensitive);
 # 3. populate the new dictionary with the letters as keys, ensuring each key is unique, and assign the value for each key with the count of that letter;
 # 4. return the new dictionary.
 
