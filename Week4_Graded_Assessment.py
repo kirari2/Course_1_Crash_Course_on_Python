@@ -190,3 +190,46 @@ speed_limits = {"street": 35, "highway": 65, "school": 15}
 speed_limits["highway"]
 
 # Should be 65
+
+# Question 11
+# Fill in the blanks to complete the “confirm_length” function. This function should return how many characters a string contains as long as it has one or more 
+# characters, otherwise it will return 0. Complete the string operations needed in this function so that input like "Monday" will produce the output "6".
+
+def confirm_length(word):
+
+    # Complete the condition statement using a string operation. 
+    if len(word) >= 1:
+        # Complete the return statement using a string operation.
+        return len(word)
+    else:
+        return 0
+
+
+print(confirm_length("a")) # Should print 1
+print(confirm_length("This is a long string")) # Should print 21
+print(confirm_length("Monday")) # Should print 6
+print(confirm_length("")) # Should print 0
+
+# Question 12
+# Question 2
+# Complete the for loop and string method needed in this function so that a function call like "alpha_length("This has 1 number in it")" will return the output "17". 
+# This function should:
+# 1. accept a string through the parameters of the function;
+# 2. iterate over the characters in the string;
+# 3. determine if each character is a letter (counting only alphabetic characters; numbers, punctuation, and spaces should be ignored);
+# 4. increment the counter;
+# 5. return the count of letters in the string.
+
+def alpha_length(string):
+    character = ""
+    count_alpha = 0
+    # Complete the for loop sequence to iterate over "string".
+    for character in string: 
+        # Complete the if-statement using a string method. 
+        if character.isalpha():
+            count_alpha += 1  
+    return count_alpha
+ 
+print(alpha_length("This has 1 number in it")) # Should print 17
+print(alpha_length("Thisisallletters")) # Should print 16
+print(alpha_length("This one has punctuation!")) # Should print 21
