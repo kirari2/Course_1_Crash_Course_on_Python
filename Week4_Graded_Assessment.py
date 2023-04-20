@@ -234,6 +234,25 @@ print(alpha_length("This has 1 number in it")) # Should print 17
 print(alpha_length("Thisisallletters")) # Should print 16
 print(alpha_length("This one has punctuation!")) # Should print 21
 
+# Question 13
+# Consider the following scenario about using Python lists: 
+# Employees at a company shared  the distance they drive to work (in miles) through an online survey. These distances were automatically added by Python to a list 
+# called “distances” in the order that each employee submitted their distance. Management wants the list to be sorted in the order of the longest distance to the 
+# shortest distance. 
+# Complete the function to sort the “distances” list. This function should:
+# 1. sort the given “distances” list, passed through the function’s parameters; ; 
+# 2. reverse the sort order so that it goes from the longest to the shortest distance;
+# 3. return the modified “distances” list.
+
+def sort_distance(distances):
+    distances.sort() # Sort the list
+    distances.reverse() # Reverse the order of the list
+    return distances
+
+
+print(sort_distance([2,4,0,15,8,9]))
+# Should print [15, 9, 8, 4, 2, 0]
+
 # Question 18
 # What does the list "colors" contain after these commands are executed?
 
