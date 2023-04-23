@@ -108,17 +108,17 @@ def max_elevation_city(min_population):
 	# Evaluate the 1st instance to meet the requirements:
 	# does city #1 have at least min_population and
 	# is its elevation the highest evaluated so far?
-	if city1.population < min_population:
+	if city1.population >= min_population:
 		return_city = city1
 	# Evaluate the 2nd instance to meet the requirements:
 	# does city #2 have at least min_population and
 	# is its elevation the highest evaluated so far?
-	if city2.population < min_population and city2.population > city1.population:
+	if city2.population >= min_population and city2.elevation > return_city.elevation:
 		return_city = city2
 	# Evaluate the 3rd instance to meet the requirements:
 	# does city #3 have at least min_population and
 	# is its elevation the highest evaluated so far?
-	if city3.population < city2.population and city3.population > city2.population:
+	if city3.population < city2.population and city3.elevation > return_city_elevation:
 		return_city = city3
 
 	#Format the return string
@@ -131,3 +131,34 @@ print(max_elevation_city(100000)) # Should print "Cusco, Peru"
 print(max_elevation_city(1000000)) # Should print "Sofia, Bulgaria"
 print(max_elevation_city(10000000)) # Should print ""
 
+# Question 4
+# What makes an object different from a class?
+
+# Answer: An object is a specific instance of a class
+
+# Question 5
+# Question 5
+# We have two pieces of furniture: a brown wood table and a red leather couch. Fill in the 
+# blanks following the creation of each Furniture class instance, so that the describe_furniture 
+# function can format a sentence that describes these pieces as follows: "This piece of furniture
+# is made of {color} {material}"
+
+class Furniture:
+	color = ""
+	material = ""
+
+table = Furniture()
+table.color = "brown"
+table.material = "wood"
+
+couch = Furniture()
+couch.color = "red"
+couch.material = "leather"
+
+def describe_furniture(piece):
+	return ("This piece of furniture is made of {} {}".format(piece.color, piece.material))
+
+print(describe_furniture(table)) 
+# Should be "This piece of furniture is made of brown wood"
+print(describe_furniture(couch)) 
+# Should be "This piece of furniture is made of red leather"
