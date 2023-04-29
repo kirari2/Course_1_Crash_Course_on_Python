@@ -51,7 +51,7 @@ server.add_connection("192.168.1.1")
 print(server.load())
 ```
 
-After running the above code cell, if you get a NameError message, be sure to run the Server class definition code block first.
+After running the above code cell, if you get a **NameError** message, be sure to run the Server class definition code block first.
 
 The output should be 0. This is because some things are missing from the Server class. So, you'll need to go back and fill in the blanks to make it behave properly.
 
