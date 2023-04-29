@@ -136,7 +136,7 @@ What if we add a new server?
 
 ```python
 l.servers.append(Server())  # Total nummber of servers doubled (1 + 1 = 2), therefore halving the load
-print(l.avg_load())
+print(l.avg_load())  # Able to print the value, thanks to the "def __str__(self)"
 ```
 
 The average load should now be half of what it was before. If it's not, make sure you correctly fill in the missing gaps for the `add_connection` and `avg_load` methods so that this code works correctly.
