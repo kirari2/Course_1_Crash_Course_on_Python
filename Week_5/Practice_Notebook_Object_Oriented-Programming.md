@@ -80,7 +80,7 @@ class LoadBalancing:  # Recall composition is making use of the code in other cl
     def __init__(self):
         """Initialize the load balancing system with one server"""
         self.connections = {}  # Initialize mutable attributes in the constructor
-        self.servers = [Server()]
+        self.servers = [Server()]  # Create "servers" as a list of class Server
 
     def add_connection(self, connection_id):
         """Randomly selects a server and adds a connection to it."""
