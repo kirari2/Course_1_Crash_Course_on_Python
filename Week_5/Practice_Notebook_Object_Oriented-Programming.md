@@ -87,7 +87,7 @@ class LoadBalancing:  # Recall composition is making use of the code in other cl
         server = random.choice(self.servers)  # The random.choice() method returns a randomly selected element from the specified sequence, which can be a string, a range, a list, a tuple or any other kind of sequence
         # Add the connection to the dictionary with the selected server
         # Add the connection to the server
-        server.add_connection(connection_id)
+        server.add_connection(connection_id)  # Using the Server class method "add_connection"
         self.ensure_availability()
 
     def close_connection(self, connection_id):
