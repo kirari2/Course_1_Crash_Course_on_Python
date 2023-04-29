@@ -5,7 +5,7 @@ To represent the servers that are taking care of the connections, we'll use a Se
 
 Run the following code that defines this Server class.
 
-```
+```python
 #Begin Portion 1#
 import random
     
