@@ -167,5 +167,5 @@ print(l.avg_load())
 Awesome! If the average load is indeed less than 50%, you are all done with this assessment.
 
 ### References
-(1) fkhjoy: Week5 Object Oriented Programming
+(1) fkhjoy: Week5 Object Oriented Programming \n
 https://github.com/fkhjoy/Coursera-Crash-Course-on-Python/blob/master/Week5_C1M5_Object_Oriented_Programming_V7.ipynb
