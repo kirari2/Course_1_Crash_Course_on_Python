@@ -136,7 +136,7 @@ What if we add a new server?
 
 ```python
 l.servers.append(Server())  # Total nummber of servers doubled (1 + 1 = 2), therefore halving the load
-print(l.avg_load())  # "l" is printable, thanks to the "__str__(self)" definition
+print(l.avg_load())
 ```
 
 The average load should now be half of what it was before. If it's not, make sure you correctly fill in the missing gaps for the `add_connection` and `avg_load` methods so that this code works correctly.
@@ -157,7 +157,7 @@ Great job! Before, we added a server manually. But we want this to happen automa
 ```python
 for connection in range(20):
     l.add_connection(connection)
-print(l)
+print(l)  # "l" is printable, thanks to the "__str__(self)" definition
 ```
 
 The code above adds 20 new connections and then prints the loads for each server in the load balancer. If you coded correctly, new servers should have been added automatically to ensure that the average load of all servers is not more than 50%.
