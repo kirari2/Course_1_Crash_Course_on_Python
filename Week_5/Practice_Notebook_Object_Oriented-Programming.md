@@ -123,7 +123,7 @@ As with the Server class, this class is currently incomplete. You need to fill i
 
 ```python
 l = LoadBalancing()
-l.add_connection("fdca:83d2::f20d")
+l.add_connection("fdca:83d2::f20d")  # Use method "add_connection" of the class LoadBalancing
 print(l.avg_load())
 ```
 
