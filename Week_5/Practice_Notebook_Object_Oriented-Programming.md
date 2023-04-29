@@ -53,15 +53,15 @@ print(server.load())  # There is no need to pass the "self" parameter because "s
 
 After running the above code cell, if you get a **NameError** message, be sure to run the Server class definition code block first.
 
-The output should be 0. This is because some things are missing from the Server class. So, you'll need to go back and fill in the blanks to make it behave properly.
+The output should be 0. This is because some things are missing from the `Server` class. So, you'll need to go back and fill in the blanks to make it behave properly.
 
 Go back to the Server class definition and fill in the missing parts for the `add_connection` and load methods to make the cell above print a number different than zero. As the `load` is calculated randomly, this number should be different each time the code is executed.
 
-Hint: Recall that you can iterate through the values of your connections dictionary just as you would any sequence.
+Hint: Recall that you can iterate through the values of your `connections` dictionary just as you would any sequence.
 
-Great! If your output is a random number between 1 and 10, you have successfully coded the `add_connection` and `load` methods of the Server class. Well done!
+Great! If your output is a random number between 1 and 10, you have successfully coded the `add_connection` and `load` methods of the `Server` class. Well done!
 
-What about closing a connection? Right now the `close_connection` method doesn't do anything. Go back to the Server class definition and fill in the missing code for the `close_connection` method to make the following code work correctly:
+What about closing a connection? Right now the `close_connection` method doesn't do anything. Go back to the `Server` class definition and fill in the missing code for the `close_connection` method to make the following code work correctly:
 
 ```python
 server.close_connection("192.168.1.1")
