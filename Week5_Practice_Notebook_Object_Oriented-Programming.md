@@ -40,3 +40,11 @@ class Server:
     
 #End Portion 1#
 ```
+Now run the following cell to create a Server instance and add a connection to it, then check the load:
+```python
+server.close_connection("192.168.1.1")
+print(server.load)
+```
+You have successfully coded the `close_connection` method if the cell above prints 0.
+
+Hint: Remember that `del` dictionary[key] removes the item with key key from the dictionary.
