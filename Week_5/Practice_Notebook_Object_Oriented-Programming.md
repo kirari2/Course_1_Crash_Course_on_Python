@@ -16,6 +16,7 @@ class Server:
     
     def add_connection(self, connection_id):
         """Adds a new connection to this server."""
+        # random.random() return number between 0 and 1
         connection_load = random.random()*10+1
         # Add the connection to the dictionary with the calculated load
         self.connections[connection_id] = connection_load
