@@ -46,9 +46,9 @@ Now run the following cell to create a Server instance and add a connection to i
 
 ```python
 server = Server()  # Create a new instance of the Server class called "server"
-server.add_connection("192.168.1.1") # Call the instance method "add_connection"
+server.add_connection("192.168.1.1")  # Call the instance method "add_connection"
 
-print(server.load())
+print(server.load())  # There is no need to pass the "self" parameter because "self" is implicitly passed when you call the instance method "load".
 ```
 
 After running the above code cell, if you get a **NameError** message, be sure to run the Server class definition code block first.
