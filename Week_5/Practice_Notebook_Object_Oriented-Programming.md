@@ -135,7 +135,7 @@ After running the above code, the output is 0. Fill in the missing parts for the
 What if we add a new server?
 
 ```python
-l.servers.append(Server())
+l.servers.append(Server())  # Total nummber of servers doubled (1 + 1 = 2), therefore halving the load
 print(l.avg_load())
 ```
 
