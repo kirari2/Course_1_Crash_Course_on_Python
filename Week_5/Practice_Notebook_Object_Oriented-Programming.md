@@ -75,7 +75,7 @@ Alright, we now have a basic implementation of the `server` class. Let's look at
 
 ```python
 #Begin Portion 2#
-class LoadBalancing:
+class LoadBalancing:  # Recall composition is making use of the code in other classes by calling their methods
 
     def __init__(self):
         """Initialize the load balancing system with one server"""
