@@ -71,7 +71,7 @@ You have successfully coded the `close_connection` method if the cell above prin
 
 Hint: Remember that `del` dictionary[key] removes the item with key `key` from the dictionary.
 
-Alright, we now have a basic implementation of the server class. Let's look at the basic LoadBalancing class. This class will start with only one server available. When a connection gets added, it will randomly select a server to serve that connection, and then pass on the connection to the server. The LoadBalancing class also needs to keep track of the ongoing connections to be able to close them. This is the basic structure:
+Alright, we now have a basic implementation of the `server` class. Let's look at the basic `LoadBalancing` class. This class will start with only one server available. When a connection gets added, it will randomly select a server to serve that connection, and then pass on the connection to the server. The `LoadBalancing` class also needs to keep track of the ongoing connections to be able to close them. This is the basic structure:
 
 ```python
 #Begin Portion 2#
