@@ -45,8 +45,8 @@ class Server:
 Now run the following cell to create a Server instance and add a connection to it, then check the load:
 
 ```python
-server = Server()  # Create a new instance of the Server class called server
-server.add_connection("192.168.1.1")
+server = Server()  # Create a new instance of the Server class called "server"
+server.add_connection("192.168.1.1") # Call the instance method "add_connection"
 
 print(server.load())
 ```
