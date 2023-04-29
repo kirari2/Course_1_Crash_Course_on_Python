@@ -86,16 +86,19 @@ class LoadBalancing:  # Recall composition is making use of the code in other cl
         """Randomly selects a server and adds a connection to it."""
         server = random.choice(self.servers)  # The random.choice() method returns a randomly selected element from the specified sequence, which can be a string, a range, a list, a tuple or any other kind of sequence
         # Add the connection to the dictionary with the selected server
-        self.connections[connection_id] = server
         # Add the connection to the server
         server.add_connection(connection_id)
+        self.ensure_availability()
 
     def close_connection(self, connection_id):
         """Closes the connection on the the server corresponding to connection_id."""
         # Find out the right server
         # Close the connection on the server
         # Remove the connection from the load balancer
-        del self.connections[connection_id]
+        for item in self.servers:
+            if connection_id in item.connections:
+                item.close_connection(connection_id)
+                break
 
     def avg_load(self):
         """Calculates the average load of all servers"""
@@ -105,11 +108,12 @@ class LoadBalancing:  # Recall composition is making use of the code in other cl
         for item in self.servers:
             total_load += item.load()
             total_server += 1
-        return total_load / total_server
+        return total_load/total_server
 
     def ensure_availability(self):
         """If the average load is higher than 50, spin up a new server"""
-        pass
+        if self.avg_load() > 50:
+            self.servers.append(Server())
 
     def __str__(self):
         """Returns a string with the load for each server."""
